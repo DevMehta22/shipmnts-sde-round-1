@@ -1,9 +1,8 @@
 const mongoose = require('mongoose')
 
 const PlanSchema = new mongoose.Schema({
-    store_id:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:'Store',
+    store_location:{
+        type:String,
         required:true
     },
     valid_from:{

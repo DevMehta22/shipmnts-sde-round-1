@@ -5,6 +5,7 @@ const helmet = require('helmet')
 const morgan = require('morgan')
 
 const storeRoutes = require('./routes/storeRoutes')
+const planRoutes = require('./routes/planRoutes')
 
 
 const app = express()
@@ -14,6 +15,7 @@ app.use(helmet())
 app.use(morgan('dev'))
 
 app.use('/store',storeRoutes)
+app.use('/plan',planRoutes)
 
 const port = process.env.PORT || 5000;
 

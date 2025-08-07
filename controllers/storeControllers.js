@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const StoreSchema = require('../models/storeSchema')
 
 const postStore = async(req,res)=>{
-    try{const {store_location,  currency,tax_percentage,premium_items} = req.body;
+    try{const {store_location,currency,tax_percentage,premium_items} = req.body;
     if(!store_location || !currency || !tax_percentage || !premium_items){
         return res.status(400).json({success:"false",message:"Invalid request body"});
     }
