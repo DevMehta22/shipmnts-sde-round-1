@@ -6,6 +6,7 @@ const morgan = require('morgan')
 
 const storeRoutes = require('./routes/storeRoutes')
 const planRoutes = require('./routes/planRoutes')
+const calculateRoutes = require('./routes/calculateRoutes')
 
 
 const app = express()
@@ -16,6 +17,7 @@ app.use(morgan('dev'))
 
 app.use('/store',storeRoutes)
 app.use('/plan',planRoutes)
+app.use('/calculate',calculateRoutes)
 
 const port = process.env.PORT || 5000;
 
