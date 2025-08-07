@@ -32,8 +32,7 @@ const PlanSchema = new mongoose.Schema({
                 required:true
             },
             extra_charge:{
-                type:Number,
-                required:true
+                type:Number
             }
     }
     ]
